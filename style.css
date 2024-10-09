@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+/*font-family: */
+
+:root{
+    --ff-sans: 'Poppins', sans-serif;
+
+    --fw-light: 200;
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+
+    --fs-400: 0.9725rem;
+    --fs-500: 1.25rem;
+    --fs-900: 2.5rem;
+
+    --color-red: hsl(0, 78%, 62%);
+    --color-cyan: hsl(180, 62%, 55%);
+    --color-orange: hsl(34, 97%, 64%);
+    --color-blue: hsl(212, 86%, 64%);
+
+    --color-neutral: hsl(234, 12%, 34%);
+    --color-light: hsl(229, 6%, 66%);
+    --color-very-light: hsl(0, 0%, 98%)
+
+
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3{
+    line-height: 1.2;
+}
+
+html{
+    font-family: var(--ff-sans);
+}
+
+body{
+    margin: 0;
+    color: var(--color-neutral);
+    font-size: 0.9725rem;
+    background: rgba(5, 32, 122, 0.2);
+}
+
+.wrapper{
+    padding-inline: 2rem;
+    margin-inline: auto;
+    max-width: 1200px;
+
+}
+
+.narrow-wrapper{
+    margin-block: 6rem;
+    max-width: 540px;
+    text-align: center;
+}
+
+h1 > span{
+    font-weight: var(--fw-light);
+}
+
+.grid-layout{
+    margin-bottom: var(--gap);
+
+    --gap: 2rem;
+    display: grid;
+
+    gap: var(--gap)
+}
+
+
+.card{
+    padding: 2rem;
+    --border-radius: 0.3rem;
+    border-radius: var(--border-radius);
+    border-top: var(--border-radius) solid;
+    font-size: var(--fs-400);
+
+
+    box-shadow: 0 1rem 1.5rem -0.5rem rgba(0 50 100 / 0.15);
+}
+
+
+
+p{
+    color: var(--color-light);
+    font-weight: var(--fw-regular);
+}
+
+.color__cyan{
+    border-color: var(--color-cyan);
+}
+.color__red{
+    border-color: var(--color-red);
+}
+.color__orange{
+    border-color: var(--color-orange);
+}
+.color__blue{
+    border-color: var(--color-blue);
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    padding: 1rem 0 0;
+}
+
+@media (min-width: 800px) {
+    .grid-layout{
+        grid-template-areas:
+            "...   two   ...."
+            "one   two   four"
+            "one   three four"
+            "...   three ....";
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 5rem;
+    }
+    .card:nth-child(1){
+        grid-area: one;
+    }
+    .card:nth-child(2){
+        grid-area: two;
+    }
+    .card:nth-child(3){
+        grid-area: three;
+    }
+    .card:nth-child(4){
+        grid-area: four;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
